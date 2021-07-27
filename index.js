@@ -7,7 +7,8 @@ var request = require('request');
 // put the url of the api. this code expects json 
 const coinUrl = 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_market_cap=false&include_24hr_vol=false&include_24hr_change=false&include_last_updated_at=false';
 const nameBeforePrice = 'price is '; // this is the name before price is set
-const updateInterval = 10000; // this is how fast it will update in millis
+const guildId = '832468129644544040'
+const updateInterval = 30000; // this is how fast it will update in millis
 
 client.login(process.env.TOKEN); // <- get bot token in .env
 
@@ -28,7 +29,6 @@ client.on('message', message => {
     if (message.content == "!ping") { // Check if content of message is "!ping"
         message.channel.send("pong!"); // Call .send() on the channel object the message was sent in
     }
-
 
 })
 
